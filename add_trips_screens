@@ -1,0 +1,160 @@
+import 'package:flutter/material.dart';
+
+class AddTripsScreen extends StatefulWidget {
+  @override
+  _AddTripsScreenState createState() => _AddTripsScreenState();
+}
+
+class _AddTripsScreenState extends State<AddTripsScreen> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Color(0xffE5E5E5),
+      appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(
+            Icons.chevron_left,
+            color: Colors.black,
+            size: 24,
+          ),
+          onPressed: () => Navigator.pop(context),
+        ),
+        elevation: 0,
+        backgroundColor: Color(0xffE5E5E5),
+        centerTitle: false,
+        title: Text(
+          'Create a trip',
+          style: TextStyle(
+              fontWeight: FontWeight.w600,
+              fontSize: 18,
+              fontStyle: FontStyle.normal,
+              color: Colors.black),
+        ),
+      ),
+      body: SingleChildScrollView(
+        child: Container(
+          margin: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              TextField(
+                cursorColor: Color(0xffA5A2A2),
+                decoration: InputDecoration(
+                  hintText: 'Enter Departure',
+                  hintStyle: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.normal,
+                      color: Color(0xffA5A2A2)),
+                  focusColor: Color(0xffA5A2A2),
+                ),
+              ),
+                  Row(
+                    children: <Widget>[
+                      Expanded(
+                        child: TextField(
+                          cursorColor: Color(0xffA5A2A2),
+                          decoration: InputDecoration(
+                            hintText: 'Enter Date',
+                            hintStyle: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.normal,
+                                color: Color(0xffA5A2A2)),
+                            focusColor: Color(0xffA5A2A2),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 20,
+                      ),
+                      Expanded(
+                        child: TextField(
+                          cursorColor: Color(0xffA5A2A2),
+                          decoration: InputDecoration(
+                            hintText: 'Enter Time',
+                            hintStyle: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.normal,
+                                color: Color(0xffA5A2A2)),
+                            focusColor: Color(0xffA5A2A2),
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+
+              TextField(
+                cursorColor: Color(0xffA5A2A2),
+                decoration: InputDecoration(
+                  hintText: 'Enter Destination',
+                  hintStyle: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.normal,
+                      color: Color(0xffA5A2A2)),
+                  focusColor: Color(0xffA5A2A2),
+                ),
+              ),
+             Row(
+               children: <Widget>[
+                 Expanded(
+                   child: TextField(
+                     cursorColor: Color(0xffA5A2A2),
+                     decoration: InputDecoration(
+                       hintText: 'Enter Date',
+                       hintStyle: TextStyle(
+                           fontSize: 18,
+                           fontWeight: FontWeight.normal,
+                           color: Color(0xffA5A2A2)),
+                       focusColor: Color(0xffA5A2A2),
+                     ),
+                   ),
+                 ),
+                 SizedBox(
+                   width: 20,
+                 ),
+                 Expanded(
+                   child:TextField(
+                     cursorColor: Color(0xffA5A2A2),
+                     decoration: InputDecoration(
+                       hintText: 'Enter Time',
+                       hintStyle: TextStyle(
+                           fontSize: 18,
+                           fontWeight: FontWeight.normal,
+                           color: Color(0xffA5A2A2)),
+                       focusColor: Color(0xffA5A2A2),
+                     ),
+                   ),
+                 )
+               ],
+             ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Row(
+                  children: <Widget>[
+                    Expanded(
+                      child: TextField(
+                        cursorColor: Color(0xffA5A2A2),
+                        decoration: InputDecoration(
+                          hintText: 'Trip Type',
+                          hintStyle: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.normal,
+                              color: Color(0xffA5A2A2)),
+                          focusColor: Color(0xffA5A2A2),
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.only(right:1),
+                      child: Icon(Icons.keyboard_arrow_down,color: Colors.white,),
+                    ),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
